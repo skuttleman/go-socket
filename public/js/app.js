@@ -1,6 +1,6 @@
 console.log('here');
 
 var socket = io();
-socket.on('chat message', function(response) {
+socket.on('game move', function(response) {
   console.log(response);
 });

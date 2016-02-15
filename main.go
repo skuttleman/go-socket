@@ -12,6 +12,6 @@ func main() {
 	http.Handle("/socket.io/", services.Socket())
 	http.Handle("/", http.FileServer(http.Dir("public")))
 	port := os.Getenv("PORT")
-	http.ListenAndServe(":" + port, nil)
 	fmt.Println("Server is listening on:", port)
+	http.ListenAndServe(":" + port, nil)
 }
